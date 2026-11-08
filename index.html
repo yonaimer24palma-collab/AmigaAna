@@ -1,1 +1,416 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Una sorpresa para Ana 💜</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: linear-gradient(145deg, #f5edff, #fffaff, #eee4fa);
+  color: #57436e;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #79549b;
+}
+
+p {
+  line-height: 1.9;
+  font-size: 17px;
+}
+
+.portada {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  background: linear-gradient(145deg, #e7d7f8, #fffaff, #eee2fa);
+}
+
+.portada h1 {
+  font-size: 38px;
+}
+
+.corazon {
+  font-size: 85px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  animation: latido 1.3s infinite;
+}
+
+@keyframes latido {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+main {
+  display: none;
+  padding: 20px 15px;
+}
+
+.paso {
+  display: none;
+  max-width: 850px;
+  margin: 20px auto;
+  padding: 30px 20px;
+  background: #ffffffd9;
+  border: 1px solid #e2ccef;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px #8060a020;
+}
+
+.paso h2 {
+  font-size: 27px;
+}
+
+.mensaje {
+  max-width: 650px;
+  margin: 25px auto;
+  padding: 15px;
+}
+
+.fotos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 25px auto;
+}
+
+.fotos img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px #76548b30;
+}
+
+.boton {
+  background: linear-gradient(135deg, #9873b8, #704b91);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 28px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.boton:hover {
+  opacity: 0.9;
+}
+
+.progreso {
+  color: #9a79b3;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.final {
+  background: linear-gradient(145deg, #f0e3fa, #fff8ff);
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid #d8bee9;
+  margin-top: 25px;
+}
+
+footer {
+  padding: 25px;
+  color: #85649e;
+}
+
+@media (max-width: 550px) {
+  .fotos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fotos img {
+    height: 170px;
+  }
+
+  .portada h1 {
+    font-size: 30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="portada" id="portada">
+  <h2>✨ Algo especial para ti ✨</h2>
+  <h1>Para Ana 💜</h1>
+
+  <p>
+    Hay personas que hacen más bonito
+    nuestro camino simplemente por existir.
+  </p>
+
+  <p>Hoy tengo una pequeña sorpresa para ti...</p>
+
+  <button class="corazon" onclick="comenzar()">
+    💜
+  </button>
+
+  <p><strong>Toca el corazón para descubrirla</strong></p>
+</section>
+
+<main id="contenido">
+
+<!-- PASO 1 -->
+
+<section class="paso" id="paso1">
+
+  <p>UN PEQUEÑO DETALLE PARA TI 🌷</p>
+
+  <h2>Lo especial de las personas</h2>
+
+  <div class="mensaje">
+    <p>
+      Hay personas que tienen una manera especial
+      de transmitir alegría, tranquilidad y buenas
+      energías.
+    </p>
+
+    <p>
+      Personas con las que una conversación puede
+      convertirse en un momento bonito, incluso
+      después de mucho tiempo sin hablar.
+    </p>
+
+    <p>
+      Y tú eres una de esas personas.
+      Nunca dejes de ser esa persona tan especial.
+    </p>
+  </div>
+
+  <div class="fotos">
+    <img src="ana1.jpg" alt="Ana 1">
+    <img src="ana2.jpg" alt="Ana 2">
+    <img src="ana3.jpg" alt="Ana 3">
+  </div>
+
+  <p class="progreso">Paso 1 de 4</p>
+
+  <button class="boton" onclick="mostrarPaso(2)">
+    Continuar 💜
+  </button>
+
+</section>
+
+<!-- PASO 2 -->
+
+<section class="paso" id="paso2">
+
+  <p>QUIERO RECORDARTE ALGO ✨</p>
+
+  <h2>Nunca dejes de creer en ti</h2>
+
+  <div class="mensaje">
+    <p>
+      Nunca permitas que un día difícil te haga
+      olvidar lo mucho que vales.
+    </p>
+
+    <p>
+      Tienes derecho a soñar en grande, a comenzar
+      de nuevo, a equivocarte y a levantarte
+      con más fuerza.
+    </p>
+
+    <p>
+      No te conformes con menos de lo que mereces.
+      Sigue adelante, porque todavía tienes
+      muchísimas cosas bonitas por vivir.
+    </p>
+
+    <p>
+      Confía en ti. Eres capaz de lograr cosas
+      maravillosas.
+    </p>
+  </div>
+
+  <div class="fotos">
+    <img src="ana4.jpg" alt="Ana 4">
+    <img src="ana5.jpg" alt="Ana 5">
+    <img src="ana6.jpg" alt="Ana 6">
+  </div>
+
+  <p class="progreso">Paso 2 de 4</p>
+
+  <button class="boton" onclick="mostrarPaso(1)">
+    Anterior
+  </button>
+
+  <button class="boton" onclick="mostrarPaso(3)">
+    Hay algo más... 💜
+  </button>
+
+</section>
+
+<!-- PASO 3 -->
+
+<section class="paso" id="paso3">
+
+  <p>UN DESEO SINCERO PARA TI 🌸</p>
+
+  <h2>Todo lo bonito que deseo para tu vida</h2>
+
+  <div class="mensaje">
+    <p>
+      Deseo que la vida te sorprenda con motivos
+      para sonreír, con oportunidades que te hagan
+      crecer y con personas que sepan valorar
+      el corazón que tienes.
+    </p>
+
+    <p>
+      Que nunca te falte salud, tranquilidad,
+      amor, motivos para levantarte cada mañana
+      y fuerzas para perseguir tus sueños.
+    </p>
+
+    <p>
+      Que Dios ilumine tus pasos, cuide tu camino
+      y te permita alcanzar todo aquello que
+      tu corazón anhela.
+    </p>
+
+    <p>
+      Mereces ser feliz, Ana.
+      Y ojalá la vida te regale muchísimas razones
+      para serlo.
+    </p>
+  </div>
+
+  <div class="fotos">
+    <img src="ana7.jpg" alt="Ana 7">
+    <img src="ana8.jpg" alt="Ana 8">
+    <img src="ana9.jpg" alt="Ana 9">
+  </div>
+
+  <p class="progreso">Paso 3 de 4</p>
+
+  <button class="boton" onclick="mostrarPaso(2)">
+    Anterior
+  </button>
+
+  <button class="boton" onclick="mostrarPaso(4)">
+    Última sorpresa 💜
+  </button>
+
+</section>
+
+<!-- PASO 4 -->
+
+<section class="paso" id="paso4">
+
+  <p>ANTES DE TERMINAR... 💜</p>
+
+  <h2>Hay algo que quiero que sepas</h2>
+
+  <div class="mensaje">
+
+    <p>
+      Quiero que sepas que te tengo un cariño
+      muy especial y que me alegra haberte
+      encontrado en mi camino.
+    </p>
+
+    <p>
+      Y hay algo que a veces pienso:
+      si nuestros caminos se hubieran cruzado
+      en otra etapa de mi vida, cuando mi historia
+      hubiera sido diferente y mi corazón estuviera
+      libre, quizá me habría encantado ser yo
+      quien caminara a tu lado, te cuidara
+      y buscara hacerte feliz.
+    </p>
+
+    <p>
+      Pero la vida tiene sus propios tiempos,
+      y hoy mi deseo sincero es que seas feliz,
+      que te quieran bonito y que nunca te falten
+      razones para sonreír.
+    </p>
+
+  </div>
+
+  <div class="fotos">
+    <img src="ana10.jpg" alt="Ana 10">
+    <img src="ana11.jpg" alt="Ana 11">
+    <img src="ana12.jpg" alt="Ana 12">
+  </div>
+
+  <div class="final">
+    <h2>Con mucho cariño, Ana 💜</h2>
+
+    <p>
+      Nunca olvides lo valiosa que eres
+      y todo lo bonito que mereces.
+    </p>
+
+    <h2>¡Que la vida te sonría siempre! 🌷</h2>
+  </div>
+
+  <p class="progreso">Paso 4 de 4 · Fin de la sorpresa</p>
+
+  <button class="boton" onclick="mostrarPaso(3)">
+    Volver
+  </button>
+
+</section>
+
+<footer>
+  Hecho con cariño para Ana 💜
+</footer>
+
+</main>
+
+<audio id="musica" src="Color-Esperanza.mp3" preload="auto"></audio>
+
+<script>
+
+function comenzar() {
+  document.getElementById("portada").style.display = "none";
+  document.getElementById("contenido").style.display = "block";
+
+  mostrarPaso(1);
+
+  const musica = document.getElementById("musica");
+
+  musica.play().catch(() => {
+    console.log("No se pudo iniciar la música.");
+  });
+}
+
+function mostrarPaso(numero) {
+
+  document.querySelectorAll(".paso").forEach(paso => {
+    paso.style.display = "none";
+  });
+
+  document.getElementById("paso" + numero).style.display = "block";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+</script>
+
+</body>
+</html>
+
